@@ -1,0 +1,18 @@
+body{
+  background-color: rgba(6, 7, 45, 1);
+
+}
+.content{
+  color: white;
+}
+#search{
+  height: 40px;
+  width: 396px;
+  left: 991px;
+  top: 33px;
+  border-radius: 30px;
+  float: right;
+  background: rgba(217, 217, 217, 1);
+  font-size: large;
+
+}

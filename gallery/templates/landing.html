@@ -1,0 +1,75 @@
+{%extends 'base.html'%}
+{% load bootstrap4 %}
+{% load static%}
+{%block content%}
+<body>
+  <div class="content" name="content">
+    <div class="search">
+      <form class="d-flex">
+        <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
+      </form>
+    </div>
+    <div class="mess">
+      <h1>Enjoy the ride</h1>
+      <h2>and share what you like with your friends</h2>
+    </div>
+
+    <!-- categories start here  -->
+    <div class="cars">
+      <h1>Cars</h1>
+      <div class="cards">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- deco category  -->
+    <div class="deco">
+      <h1>Deco</h1>
+      <div class="houses">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- fashion category  -->
+    <div class="fashion">
+      <h1>Fashion</h1>
+
+      <div class="clothes">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- hairstyles category  -->
+    <div class="hair">
+      <h1>Hairstyles</h1>
+
+      <div class="styles">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+ 
+
+</body>
+{%endblock%}
