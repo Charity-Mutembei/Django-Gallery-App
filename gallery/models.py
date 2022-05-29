@@ -17,11 +17,15 @@ class Category(models.Model):
         return self.name
 
 class Image(models.Model):
-    image_photo = models.ImageField(upload_to = 'galleries', null = False, blank = False, default ='media/articles/car3')
+   
     name =models.CharField(max_length= 100)
     description = models.TextField()
-    location = models.ForeignKey('Location', on_delete=models.DO_NOTHING)
-    category = models.ForeignKey('Category', on_delete=models.DO_NOTHING)
+    location = models.ManyToManyField(Location)
+    category = models.ManyToManyField(Category)
+    image_photo = models.ImageField(upload_to = 'galleries/',default ='media/articles/car3')
+
+    def __str__(self):
+        return self.name
 
     def save_image(self):
         '''
