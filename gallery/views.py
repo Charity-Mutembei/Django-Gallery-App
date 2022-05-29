@@ -5,14 +5,20 @@ from django.http import HttpResponse, Http404
 from django.shortcuts import render, redirect
 from .models import Image, Category, Location
 from .forms import ImageForm
+from django.db.models import Q
+
 # Create your views here.
 def welcome (request):
     '''
     this is the landing page. Containns the home page of this application
     '''
-    return render (request, 'landing.html')
+    images = Image.objects.all()
+    categories = Category.objects.all()
+    locations = Location.objects.all()
+    context = {'categories': categories, 'locations': locations, 'images': images}
+    return render (request, 'landing.html', context)
 
-def image (request):
+def photo (request):
     try: 
         images = Image.objects.all()
         categories = Category.objects.all()
@@ -55,5 +61,21 @@ def deleteImage(request, pk):
         return redirect('home')
     
     return render(request, 'delete.html', {'obj': image})
+
+def search_results(request):
+    call = request.GET.get('q') if request.GET.get('call') != None else ''
+    
+    images = Image.objects.filter(
+        Q(name__icontains = call) |
+        Q(category__name__icontains=call) |
+        Q(description__icontains=call) |
+        Q(location__name__icontains=call)
+
+    )
+
+    locations = Location.objects.all()
+
+    context = {'images': images, 'locations': locations}
+    return render(request, 'search.html', context)
 
 

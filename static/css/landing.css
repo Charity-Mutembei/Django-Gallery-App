@@ -16,3 +16,6 @@ body{
   font-size: large;
 
 }
+.card-img-top{
+  height: 100px;
+}

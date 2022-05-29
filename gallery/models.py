@@ -22,7 +22,7 @@ class Image(models.Model):
     description = models.TextField()
     location = models.ManyToManyField(Location)
     category = models.ManyToManyField(Category)
-    image_photo = models.ImageField(upload_to = 'galleries/',default ='media/articles/car3')
+    image_photo = models.ImageField(upload_to = 'galleries/galleries',default ='')
 
     def __str__(self):
         return self.name

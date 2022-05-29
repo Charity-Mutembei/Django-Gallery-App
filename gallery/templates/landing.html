@@ -2,18 +2,37 @@
 {% load bootstrap4 %}
 {% load static%}
 {%block content%}
-<body>
+<body style="overflow-x: hidden;">
   <div class="content" name="content">
-    <div class="search">
-      <form class="d-flex">
-        <input class="form-control me-2" id="search" type="search" placeholder="Search" aria-label="Search">
-      </form>
+    <div class="top">
+      <div class="search">
+        <form class="d-flex">
+          <input class="form-control me-2" id="search"role="search" type="search" placeholder="Search" action="{% url 'search_results' %}" aria-label="Search">
+        </form>
+       
+      </div>
+      <div class="mess">
+        <h1>Enjoy the ride</h1>
+        <h2>and share what you like with your friends</h2>
+      </div>
     </div>
-    <div class="mess">
-      <h1>Enjoy the ride</h1>
-      <h2>and share what you like with your friends</h2>
-    </div>
+    <div class="content2">
+      <div class="crads">
+        <h1>Categories</h1>
+      </div>
+      <div class="images">
+        {%for image in images%}
+       
+          <img class="card-img-top" src="{{image.image_photo.url}}" alt="Card image cap" style="width: 300px; height: 300px; border-radius: 40px;" >
+          
+       
 
+        {%endfor%}
+      </div>
+    </div>
+  
+  </div>
+ 
  
 
 </body>
