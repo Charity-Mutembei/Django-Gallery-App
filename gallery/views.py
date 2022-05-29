@@ -1,5 +1,5 @@
 from unicodedata import category
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.http import HttpResponse, Http404
 from django.shortcuts import render, redirect
@@ -12,10 +12,19 @@ def welcome (request):
     '''
     this is the landing page. Containns the home page of this application
     '''
-    images = Image.objects.all()
-    categories = Category.objects.all()
+    call = request.GET.get('call') if request.GET.get('call') != None else ''
+    
+    images = Image.objects.filter(
+        Q(name__icontains = call) |
+        Q(category__name__icontains=call) |
+        Q(description__icontains=call) |
+        Q(location__name__icontains=call)
+
+    )
+
     locations = Location.objects.all()
-    context = {'categories': categories, 'locations': locations, 'images': images}
+
+    context = {'images': images, 'locations': locations}
     return render (request, 'landing.html', context)
 
 def photo (request):
@@ -62,20 +71,5 @@ def deleteImage(request, pk):
     
     return render(request, 'delete.html', {'obj': image})
 
-def search_results(request):
-    call = request.GET.get('q') if request.GET.get('call') != None else ''
-    
-    images = Image.objects.filter(
-        Q(name__icontains = call) |
-        Q(category__name__icontains=call) |
-        Q(description__icontains=call) |
-        Q(location__name__icontains=call)
-
-    )
-
-    locations = Location.objects.all()
-
-    context = {'images': images, 'locations': locations}
-    return render(request, 'search.html', context)
 
 
