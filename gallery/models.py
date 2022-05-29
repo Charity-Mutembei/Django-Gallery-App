@@ -16,8 +16,8 @@ class Category(models.Model):
         return self.name
 
 class Image(models.Model):
-    image = models.ImageField(upload_to = 'galleries', null = False, blank = False)
-    name =models.CharField(max_length= 50)
+    image_photo = models.ImageField(upload_to = 'galleries', null = False, blank = False, default ='media/articles/car3')
+    name =models.CharField(max_length= 100)
     description = models.TextField()
     location = models.ForeignKey('Location', on_delete=models.DO_NOTHING)
     category = models.ForeignKey('Category', on_delete=models.DO_NOTHING)
