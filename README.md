@@ -123,8 +123,7 @@ run the application:
 
 ## Known-Bugs
 
-The application is yet to be launched to Heroku.However, the link to the blog is unresponsive, the navbar cannot display the signin and signout option due to constant crashing of the code. 
-The roles of users and writers are defined but yet to to complete the user stories/needs as requested. 
+The application contains a modal which is only active with the first image and not the rest. 
 
 ## Contact information
 
