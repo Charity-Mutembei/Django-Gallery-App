@@ -16,6 +16,19 @@
     overflow: auto; 
     background-color: white; 
   }
+  .share-link{
+    display: none;
+    position:fixed;
+    z-index:1;
+    left: 50%;
+    top: 1px;
+    border-radius: 40px;
+    padding: 30px;
+    width: 30%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: white; 
+  }
 </style>
 <body style="overflow-x: hidden;">
   <div class="content" name="content">
@@ -57,7 +70,7 @@
                     style="width: 300px; height: 400px; border-radius: 20px; margin-left: 25%;" class="img-fluid rounded-start" alt="...">
 
                   <div class="share">
-                    <i class="fa fa-share-alt" aria-hidden="true" id="share-button" style="color: black;"> Share</i>
+                    <i class="fa fa-share-alt" aria-hidden="true" id="trigger" style="color: black;"> Share</i>
                   </div>
                 </div>
                 <div class="col-md-8">
@@ -77,12 +90,15 @@
 
       <!-- modal2  -->
       <div class="share-link" class="modal fade" role="dialog">
-        <button type="button" class="close2" data-dismiss="modal">&times;</button>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <div class="modal-content">
+       
         <div class="col-md-8">
           <div class="card-body" style="color: black;">
             <p class="card-text">{{image.description}}</p>
           </div>
         </div>
+       </div>
 
       </div>
 
@@ -97,45 +113,35 @@
  <script>
    // get the modal
 var modal = document.getElementById("myModal");
-var modal2 = document.getElementsByClassName("share-link")
+var modal2 = document.getElementsByClassName("share-link");
 
 //get the trigger
 
 var trigger = document.getElementById("trigger");
-var trigger2 = document.getElementById("share-button")
+
 
 //get the button element that closes the modal
 var btn = document.getElementsByClassName("close")[0];
-var btn2 = document.getElementsByClassName("close2")[0];
 
 //when the user clicks on the image/button, open the modal
 trigger.onclick = function(){
     modal.style.display = 'block';
 
 }
-trigger2.onclick = function(){
-  modal2.style.display = 'block';
-}
+
 
 //when the user clicks on the button (x), close the modal
 btn.onclick = function(){
     modal.style.display = 'none';
 
 }
-btn2.onclick = function(){
-  modal2.style.display = 'none';
-}
+
 
 //when the user clicks anywhere outside of the modal, close it
 window.onclick = function(event){
     if(event.target == modal){
         modal.style.display = 'none';
     }
-}
-window.onclick = function(event){
-  if(event.target == modal){
-    modal.style.display = 'none';
-  }
 }
  </script>
 
