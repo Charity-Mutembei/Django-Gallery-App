@@ -51,24 +51,18 @@ Landing page with modal
             <td></td>
             <td><code>Application  loads </code></td>
             <td><code></code></td>
-            <td>see all available blogs and some inspiring quotes</td>
+            <td>see all available images</td>
         </tr>
          <tr>
-            <td>2. Login</td>
+            <td>2. Click-image</td>
             <td></td>
-            <td><code>Information collected:
-            a)user email 
-            b) user Password/passcode 
+            <td><code>The Modal shows relatively as designed:
+            a)the image displayed 
+            b) the image description and title show
+            c) the option to share the image is shown
             </code></td>
             <td><code></code></td>
-            <td>If account already exists redirect to home page and user can see the blogs and subscribe to get updates</td>
-        </tr>
-         <tr>
-            <td>3. Sign up/ Register</td>
-            <td></td>
-            <td><code>a) Username, b)user email, and c)user password</code></td>
-            <td><code></code></td>
-            <td>see all available blogs and some inspiring quotes</td>
+            <td>Any user can access this and needs no authorizations </td>
         </tr>
     </tbody>
   </table>
@@ -79,19 +73,19 @@ The following is a live link to the project:
 
 To access my repository link:
 
-[Click here](https://github.com/Charity-Mutembei/BLOG-APP)
+[Click here](https://github.com/Charity-Mutembei/Django-Gallery-App)
 
 ​
 
 *To clone this repository locally, type the following command on your terminal.*
 
-​
+​git clone 'https://github.com/Charity-Mutembei/Django-Gallery-App'
 
 If using HTTP keys, type:
 
-​
+​below is the git repository link
 
-`https://github.com/Charity-Mutembei/BLOG-APP'
+`https://github.com/Charity-Mutembei/Django-Gallery-App'
 
 
 ​
