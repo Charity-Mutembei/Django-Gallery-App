@@ -42,7 +42,7 @@ Landing page with modal
         <th></th>
         <th>Input</th>
          <th></th>
-        <th></th>
+        <th>Output</th>
       </tr>
     </thead>
     <tbody>
