@@ -21,7 +21,25 @@ class LocationTestClass(TestCase):
         self.name.save_location()
         locations = Location.objects.all()
         self.assertTrue(len(locations)> 0)
-    
+
+class CategoryTestClass(TestCase):
+    '''
+    class that tests the class category model to ensure that tests run successfully
+    '''
+    #setUp method
+    def setUp(self):
+        self.name = Category(name = '')
+
+    #testing whether we are being instantiated properly
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.name, Category)) 
+
+    #testing the save method
+    def test_save_method(self):
+        self.name.save_category()
+        categories = Category.objects.all()
+        self.assertTrue(len(categories)>0)   
 class ImageTestClass(TestCase):
     '''
     test the class model image to ensure the application runs properly
