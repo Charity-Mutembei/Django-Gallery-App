@@ -49,9 +49,9 @@
         <h1>Gallery</h1>
       </div>
       <div class="images">
-        {%for image in images%}
+        {%for gallery_image in images%}
        
-          <img class="card-img-top" id="trigger" src="{{image.image_photo.url}}" alt="Card image cap" style="width: 250px; height: 400px; border-radius: 20px;" data-toggle="modal" data-target="#myModal" >
+          <img class="card-img-top" id="trigger" src="{{gallery_image.image_photo.url}}" alt="Card image cap" style="width: 250px; height: 400px; border-radius: 20px;" data-toggle="modal" data-target="#myModal" >
        
 
         {%endfor%}
