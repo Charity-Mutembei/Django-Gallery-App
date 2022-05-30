@@ -1,33 +1,29 @@
 
 
-WritersHub.com is an application intended allow users write stories in form 
-of blogs for their expression and those of others.
+Django-Gallery-App is an application intended allow users view pictures/photographs along with share what they like with others.
 
 ## USER STORIES TARGETED 
 
-View the blog posts on the site
-Comment on blog posts
-View the most recent posts
-Email alert when a new post is made by joining a subscription.
-See random quotes on the site
-Sign in to the blog.
-Create a blog from the application.
-Delete comments that are insulting or degrading.
-Update or delete blogs created.
+The users are targeted to:
+1. view the different photos that interest them
+2. Click ona  single photo snd expand it to view the details of the photo
+    The photo details as well must appear on a modal within the same route of the main page
+3. search for different categories of photos
+4. copy a link to the photo to share with friends
+5. view photos based on the location they were taken. 
 
 
 
 ## User interface model/design snippet 
-[Click here for Design in Figma](https://www.figma.com/file/DufPeR45G6iLdMajXFggHt/WritersHub.Com)
+[Click here for Design in Figma](https://www.figma.com/file/7QEvjl2wj57PUzkeAqcpyP/Untitled?node-id=0%3A1)
 
 Landing Page
-![image description](app/static/land.png)
+![image description](static/images/Untitled%20(8).png)
 
-Blog page
-![image description](app/static/blog.png)
+Landing page with modal
+![image description](static/images/Untitled%20(9).png)
 
-Comment Page
-![image description](app/static/comment.png)
+
 
 
 
